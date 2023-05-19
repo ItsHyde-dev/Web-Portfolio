@@ -1,0 +1,60 @@
+.expand_from_center {
+    animation-name: expand-from-center;
+}
+
+.fade_in {
+    animation-name: fade-in;
+}
+
+.slide_in_left {
+    animation-name: slide-in-left;
+}
+
+
+.slide_in_left_small {
+    animation-name: slide-in-left-small;
+}
+
+@keyframes expand-from-center {
+    0% {
+       transform: scaleX(0);
+    }
+    20% {
+       transform: scaleX(0);
+    }
+    100% {
+       transform: scaleX(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-in-left-small {
+    0% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}

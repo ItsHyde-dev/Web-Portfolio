@@ -1,0 +1,62 @@
+.header_line {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 0 30px 40px;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation-duration: 1s;
+}
+
+.divider {
+    background-color: rgba(180, 180, 180, 0.3);
+    height: 1px;
+    width: 70%;
+    animation-duration: 1.5s;
+}
+
+.project_tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.page_heading {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 20px 0 20px 0;
+}
+
+.project_headings {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0 0 0 40px;
+}
+
+.project_summary {
+    font-weight: normal;
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.8;
+    padding-top: 5px;
+}
+
+.project_title_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.project_title_and_summary {
+    margin-right: auto;
+}
+
+.github_logo {
+    padding: 0 40px 0 0;
+}
+
+.test_code_logo {
+    padding: 0 40px 0 0;
+}

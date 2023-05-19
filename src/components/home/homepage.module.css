@@ -1,0 +1,49 @@
+.parah_text {
+    text-align: center;
+    font-size: 2.5vw;
+    width: 69%;
+    animation-duration: 5s;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.small1 {
+    font-size: 1rem;
+}
+
+.ht {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    animation-name: slide-in-left;
+    animation-duration: 1s;
+}
+
+.ht2{
+    font-size: 3rem;
+    animation-duration: 1.25s;
+}
+
+.header_div {
+    margin: 5% 0% 5% 8%;
+}
+
+.expanding_divider {
+    background-color: rgba(180, 180, 180, 0.2);
+    width: 70%;
+    height: 1px;
+    animation-duration: 1.5s;
+}
+
+
+@media (orientation: portrait) and (max-width : 768px) {
+    .ht {
+        font-size: 2.25rem;
+    }
+    .ht2 {
+        font-size: 1.5rem;
+    }
+}
