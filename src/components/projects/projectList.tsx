@@ -8,7 +8,8 @@ import PythonLogo from '../../assets/python-logo.png'
 import GoLogo from '../../assets/Go_Logo_Blue.svg'
 import JsLogo from '../../assets/JavaScript-logo.png'
 import BevyLogo from '../../assets/bevy_logo_dark.png'
-
+import FlutterLogo from '../../assets/flutter-logo.png'
+import FirebaseLogo from '../../assets/firebase-logo-sized.png'
 
 const summaries = {
     "NodeJs Rest API":
@@ -30,6 +31,10 @@ const summaries = {
     "Rest API in Golang":
         <div>
             Rest API implemented in Go using the fiber package
+        </div>,
+    "Helix":
+        <div>
+            Cross Platform application made using Flutter with audio and text editing functions
         </div>
 }
 
@@ -70,6 +75,14 @@ const techMap: { [key: string]: { logo: any, hover: string } } = {
         logo: BevyLogo,
         hover: "Bevy Game Engine"
     },
+    "flutter": {
+        logo: FlutterLogo,
+        hover: "Flutter"
+    },
+    "firebase": {
+        logo: FirebaseLogo,
+        hover: "Firebase"
+    },
 }
 
 const ProjectList = [
@@ -100,6 +113,13 @@ const ProjectList = [
         projectName: "golang-rest-api",
         codeUrl: "./golang-rest-api",
         technologies: [techMap.go],
+    },
+    {
+        title: "Helix: Writing Application for Musicians",
+        summary: summaries['Helix'],
+        projectName: "helix",
+        codeUrl: "./helix",
+        technologies: [techMap.flutter, techMap.firebase],
     },
 ]
 

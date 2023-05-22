@@ -12,6 +12,7 @@ var githubUrls: { [key: string]: string } = {
     "user authentication api": "https://github.com/ItsHyde-dev/NodeJs_Rest_API_Example",
     "bevy-game-1": "https://github.com/ItsHyde-dev/Pirates-Game-Rust",
     "golang-rest-api": "https://github.com/ItsHyde-dev/go_rest_api",
+    "helix": "https://github.com/ItsHyde-dev/Helix"
 }
 
 export default function ProjectPage() {
