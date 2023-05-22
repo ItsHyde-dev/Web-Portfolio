@@ -26,7 +26,9 @@ export default function Home() {
                     </h2>
                 </div>
 
-                <img src={ContactImage} className={styles.contact_image} />
+                <div className={styles.image_container}>
+                    <img src={ContactImage} className={styles.contact_image} />
+                </div>
 
             </div>
             <div className={position.vertical_center} >

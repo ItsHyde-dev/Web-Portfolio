@@ -1,3 +1,10 @@
+
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .parah_text {
     text-align: center;
     font-size: 2.5vw;
@@ -15,15 +22,55 @@
     .contact_image{
         display: none;
     }
+    .image_container{
+        display: none;
+    }
 }
 
 @media (width > 768px) {
     .contact_image {
+        position: relative;
         height: 10rem;
+        border-radius: 50%;
+    }
+
+    .image_container {
+        position: relative;
         border-radius: 50%;
         margin-left: 100px;
         margin-right: 15%;
+        aspect-ratio: 1/1;
     }
+
+    .image_container::after,
+    .image_container::before
+    {
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        width: 104%;
+        inset: 0;
+        transform-origin: center;
+        background-image: conic-gradient(from var(--gradient-angle), #ff1cdd, #2c04de);
+        filter: blur(3px);
+        transform: translateX(-1.5%) translateY(-1.5%);
+        animation: rotate-gradient 10s linear infinite;
+        z-index: -1;
+    }
+
+    .image_container::before{
+        filter: blur(3rem);
+    }
+
+    @keyframes rotate-gradient {
+        0% {
+            --gradient-angle: 0deg;
+        }
+        100% {
+            --gradient-angle: 360deg;
+        }
+    }
+
 }
 
 .italics {
