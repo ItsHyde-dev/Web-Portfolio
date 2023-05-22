@@ -1,13 +1,28 @@
 import React from "react"
 import Navbar from "../navbar/navbar"
 import styles from "./projects.module.css"
+import githubLogo from "../../assets/github-mark-white.svg"
+import codeLogo from "../../assets/transparent-code-logo.png"
+import { useNavigate } from "react-router-dom"
+import ProjectList from "./projectList"
 import position from "../../common/styles/positioning.module.css"
 import animation from "../../common/styles/animations.module.css"
+
+var githubUrls: { [key: string]: string } = {
+    "user authentication api": "https://github.com/ItsHyde-dev/NodeJs_Rest_API_Example",
+    "bevy-game-1": "https://github.com/ItsHyde-dev/Pirates-Game-Rust",
+    "golang-rest-api": "https://github.com/ItsHyde-dev/go_rest_api",
+}
 
 export default function ProjectPage() {
     return (
         <>
             <Navbar />
+            <div className={styles.page_heading}>My Projects</div>
+            <div className={`
+                ${styles.divider}
+                ${animation.expand_from_center}
+            `} />
             <ProjectGrid />
         </>
     )
@@ -15,46 +30,81 @@ export default function ProjectPage() {
 
 function ProjectGrid() {
     return (
-        <div>
-            <div className={`
-                ${position.vertical_center}
-                ${styles.page_heading}
-            `}>Projects</div>
-            <div className={position.vertical_center}>
-                <div className={`
-            ${styles.divider}
-            ${animation.expand_from_center}
-            `} />
-            </div>
-            <div className={`
-            ${styles.header_line}
-            ${animation.slide_in_left_small}
-            `}>
-                NodeJs
-            </div>
-
-            <NodeJsProjects />
-
-        </div>
+        <ul className={styles.project_headings}>
+            {
+                <ProjectBuilder projects={ProjectList} />
+            }
+        </ul>
     )
 }
 
-function NodeJsProjects() {
+function ProjectBuilder(props: { projects: {}[] }) {
+    return (
+        <>
+            {
+                props.projects.map((project: any) => {
+                    return (
+                        <ProjectRow
+                            title={project.title}
+                            summary={project.summary}
+                            projectName={project.projectName}
+                            codeUrl={project.codeUrl}
+                            technologies={project.technologies}
+                        />
+                    )
+                })
+            }
+        </>
+    )
+}
 
-    const test_code_logo = "</>";
+function ProjectRow(props: any) {
+
+    const navigate = useNavigate();
 
     return (
-        <div className={styles.project_headings}>
-            <div className={styles.project_title_row}>
-                <div className={styles.project_title_and_summary}>
-                    <div>User Authentication API</div>
-                    <div className={styles.project_summary}>JWT authentication implemented using NodeJS, Express and MongoDb</div>
+        <li>
+            <div className={styles.project_row}>
+                <div className={styles.project_info_column}>
+                    <div>{props.title}</div>
+                    <div className={styles.project_summary}>{props.summary}</div>
+                    <div className={styles.project_technologies_header}>Technologies Used:  </div>
+                    {
+                        (props.technologies && props.technologies.length > 0) &&
+                        showTechnologies(props.technologies)
+                    }
                 </div>
 
-                <div className={styles.github_logo}>GitHub Logo</div>
-                <div className={styles.test_code_logo}>{test_code_logo}</div>
 
+                <img src={githubLogo} className={styles.logos} onClick={() => openGithub(props.projectName)} />
+                <img src={codeLogo} className={styles.logos} onClick={() => navigate(props.codeUrl)}></img>
             </div>
+        </li>
+    )
+}
+
+function openGithub(projectName: string) {
+    window.open(githubUrls[projectName])
+}
+
+function showTechnologies(technologies: { [key: string]: any }[]) {
+    return (
+        <div className={position.row}>
+            {
+                technologies.map((technology: { [key: string]: any }) => {
+
+                    return (
+                        <div className={styles.tech_logos_container} data-tooltip={technology.hover} >
+                            <img
+                                src={technology.logo}
+                                className={styles.tech_logos} />
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }
+
+
+

@@ -5,6 +5,27 @@
     animation-duration: 5s;
 }
 
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (width < 768px) {
+    .contact_image{
+        display: none;
+    }
+}
+
+@media (width > 768px) {
+    .contact_image {
+        height: 10rem;
+        border-radius: 50%;
+        margin-left: 100px;
+        margin-right: 15%;
+    }
+}
+
 .italics {
     font-style: italic;
 }
@@ -29,6 +50,7 @@
 
 .header_div {
     margin: 5% 0% 5% 8%;
+    margin-right: auto;
 }
 
 .expanding_divider {

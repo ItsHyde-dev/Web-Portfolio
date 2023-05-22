@@ -2,25 +2,32 @@ import Navbar from '../navbar/navbar'
 import styles from './homepage.module.css'
 import animation from '../../common/styles/animations.module.css'
 import position from '../../common/styles/positioning.module.css'
+import ContactImage from '../../assets/contact-image.jpeg'
+
 
 export default function Home() {
     return (
         <div>
             <Navbar />
-            <div className={styles.header_div}>
-                <h1 className={`
+            <div className={styles.row}>
+                <div className={styles.header_div}>
+                    <h1 className={`
                     ${styles.ht}
                     ${animation.slide_in_left}
                 `}>
-                    Hello <br />
-                </h1>
-                <h2 className={`
+                        Hello <br />
+                    </h1>
+                    <h2 className={`
                     ${styles.ht}
                     ${styles.ht2}
                     ${animation.slide_in_left}
                 `}>
-                    I am a Software Developer
-                </h2>
+                        I am a Software Developer
+                    </h2>
+                </div>
+
+                <img src={ContactImage} className={styles.contact_image} />
+
             </div>
             <div className={position.vertical_center} >
                 <div className={styles.expanding_divider + " " + animation.expand_from_center} />
