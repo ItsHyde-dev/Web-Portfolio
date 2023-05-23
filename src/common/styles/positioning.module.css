@@ -9,3 +9,16 @@
     flex-direction: row;
     padding: 10px 0 10px 0;
 }
+
+.background {
+    position: absolute;
+    background-image: url('../../assets/rose-petals.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: transparent;
+    inset: 0;
+    z-index: -10;
+    height: 100%;
+}

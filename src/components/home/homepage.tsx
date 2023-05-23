@@ -4,7 +4,6 @@ import animation from '../../common/styles/animations.module.css'
 import position from '../../common/styles/positioning.module.css'
 import ContactImage from '../../assets/contact-image.jpeg'
 
-
 export default function Home() {
     return (
         <div>

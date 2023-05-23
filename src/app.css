@@ -1,0 +1,12 @@
+html {
+    position: absolute;
+    background-image: url('./assets/rose-petals.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #080808;
+    inset: 0;
+    z-index: -10;
+    height: 100%;
+}

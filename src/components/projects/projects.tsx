@@ -19,7 +19,6 @@ export default function ProjectPage() {
     return (
         <>
             <Navbar />
-            <div className={styles.page_heading}>My Projects</div>
             <div className={`
                 ${styles.divider}
                 ${animation.expand_from_center}
