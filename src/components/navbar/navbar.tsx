@@ -17,7 +17,6 @@ function Navbar() {
                 <Link to="/contact" className={styles.router_link}>
                     <div className={styles.nav_button} >Contact</div>
                 </Link>
-                <div className={styles.nav_button}>&#128058;</div>
             </div>
         )
     }

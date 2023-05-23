@@ -17,14 +17,14 @@ var githubUrls: { [key: string]: string } = {
 
 export default function ProjectPage() {
     return (
-        <>
+        <div>
             <Navbar />
             <div className={`
                 ${styles.divider}
                 ${animation.expand_from_center}
             `} />
             <ProjectGrid />
-        </>
+        </div>
     )
 }
 
@@ -45,6 +45,7 @@ function ProjectBuilder(props: { projects: {}[] }) {
                 props.projects.map((project: any) => {
                     return (
                         <ProjectRow
+                            key={project.title}
                             title={project.title}
                             summary={project.summary}
                             projectName={project.projectName}
@@ -94,7 +95,7 @@ function showTechnologies(technologies: { [key: string]: any }[]) {
                 technologies.map((technology: { [key: string]: any }) => {
 
                     return (
-                        <div className={styles.tech_logos_container} data-tooltip={technology.hover} >
+                        <div key={technology.hover} className={styles.tech_logos_container} data-tooltip={technology.hover} >
                             <img
                                 src={technology.logo}
                                 className={styles.tech_logos} />

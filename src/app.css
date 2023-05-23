@@ -7,6 +7,5 @@ html {
     background-position: center;
     background-color: #080808;
     inset: 0;
-    z-index: -10;
     height: 100%;
 }
