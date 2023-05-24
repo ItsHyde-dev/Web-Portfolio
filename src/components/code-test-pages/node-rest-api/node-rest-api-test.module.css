@@ -1,0 +1,12 @@
+.heading {
+    margin: 0;
+    margin-left: 60px;
+    padding-bottom: 10px;
+    animation-duration: 1s;
+}
+
+.delay_subtext {
+    animation-duration: 1.3s;
+}
+
+

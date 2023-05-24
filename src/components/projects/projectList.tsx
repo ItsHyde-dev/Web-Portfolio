@@ -90,7 +90,7 @@ const ProjectList = [
         title: "NodeJs Rest API",
         summary: summaries['NodeJs Rest API'],
         projectName: "user authentication api",
-        codeUrl: "./userAuthCodeTest",
+        codeUrl: "/nodeApiTest",
         technologies: [techMap.node, techMap.express, techMap.dialogflow, techMap.mongodb],
     },
     {

@@ -53,14 +53,16 @@
 .selected {
     font-size: 1.8rem;
     color: white;
-    animation: enlarge_nav 0.1s ease-in-out;
+    animation: enlarge_nav 0.3s;
 }
 
 @keyframes enlarge_nav {
     0% {
         font-size: 1.5rem;
+        color: rgba(100, 100, 100, 1);
     }
     100% {
         font-size: 1.8rem;
+        color: white;
     }
 }

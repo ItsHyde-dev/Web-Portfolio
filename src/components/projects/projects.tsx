@@ -6,7 +6,6 @@ import codeLogo from "../../assets/transparent-code-logo.png"
 import { useNavigate } from "react-router-dom"
 import ProjectList from "./projectList"
 import position from "../../common/styles/positioning.module.css"
-import animation from "../../common/styles/animations.module.css"
 
 var githubUrls: { [key: string]: string } = {
     "user authentication api": "https://github.com/ItsHyde-dev/NodeJs_Rest_API_Example",
@@ -18,15 +17,12 @@ var githubUrls: { [key: string]: string } = {
 export default function ProjectPage() {
     return (
         <div>
-            <Navbar highlight="projects"/>
-            <div className={`
-                ${styles.divider}
-                ${animation.expand_from_center}
-            `} />
+            <Navbar highlight="projects" />
             <ProjectGrid />
         </div>
     )
 }
+
 
 function ProjectGrid() {
     return (
@@ -78,7 +74,7 @@ function ProjectRow(props: any) {
 
 
                 <img src={githubLogo} className={styles.logos} onClick={() => openGithub(props.projectName)} />
-                <img src={codeLogo} className={styles.logos} onClick={() => navigate(props.codeUrl)}></img>
+                <img src={codeLogo} className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
             </div>
         </li>
     )
