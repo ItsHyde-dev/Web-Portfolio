@@ -7,7 +7,7 @@ import ContactImage from '../../assets/contact-image.jpeg'
 export default function Home() {
     return (
         <div>
-            <Navbar />
+            <Navbar highlight="home"/>
             <div className={styles.row}>
                 <div className={styles.header_div}>
                     <h1 className={`

@@ -7,7 +7,7 @@ import ContactImage from '../../assets/contact-image.jpeg'
 function ContactPage() {
     return (
         <>
-            <Navbar />
+            <Navbar highlight="contact"/>
 
             <div className={styles.heading}>Contact Me</div>
 

@@ -18,7 +18,7 @@ var githubUrls: { [key: string]: string } = {
 export default function ProjectPage() {
     return (
         <div>
-            <Navbar />
+            <Navbar highlight="projects"/>
             <div className={`
                 ${styles.divider}
                 ${animation.expand_from_center}

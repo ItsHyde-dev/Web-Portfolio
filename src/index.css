@@ -13,4 +13,11 @@ code {
 html {
     background-color: black;
     color: white;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
