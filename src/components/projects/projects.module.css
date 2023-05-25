@@ -86,6 +86,7 @@ li::marker{
 .logos {
     padding: 0 40px 0 0;
     height: 24px;
+    cursor: pointer;
 }
 
 .tech_logos {

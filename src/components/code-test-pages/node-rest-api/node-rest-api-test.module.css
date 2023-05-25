@@ -9,4 +9,16 @@
     animation-duration: 1.3s;
 }
 
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
 
+.expanding_divider {
+    background-color: rgba(180, 180, 180, 0.2);
+    width: 70%;
+    height: 1px;
+    animation-duration: 1.5s;
+    margin: auto;
+    margin-top: 20px;
+}
