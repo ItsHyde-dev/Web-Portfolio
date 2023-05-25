@@ -8,7 +8,7 @@ import Crazy from './components/crazy/crazy';
 import './app.css'
 import NodeRestApiTestPage from './components/code-test-pages/node-rest-api/node-rest-api-test-page';
 
-function App() {
+const App = () => {
     return (
         <BrowserRouter>
             <Routes>

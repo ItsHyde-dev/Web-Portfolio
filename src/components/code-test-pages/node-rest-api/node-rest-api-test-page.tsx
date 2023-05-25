@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../../navbar/navbar';
 import styles from './node-rest-api-test.module.css'
 import animation from '../../../common/styles/animations.module.css'
@@ -6,8 +5,9 @@ import position from '../../../common/styles/positioning.module.css'
 import techMap from '../../projects/techMap'
 import logoStyles from '../../../common/styles/logo.module.css'
 import areas from './sample-code-areas';
+import { useState } from 'react';
 
-export default function NodeRestApiTestPage() {
+function NodeRestApiTestPage() {
 
     const technologies = [techMap.node, techMap.mongodb, techMap.express, techMap.js]
     return (
@@ -47,25 +47,27 @@ export default function NodeRestApiTestPage() {
             </div>
 
             <section className={styles.test_area}>
-
-                {
-                    areas.map(area => {
-                        return connectedUl({ element: area })
-                    })
-                }
-
+                <ConnectedUl />
             </section>
         </div>
     )
 }
 
-function connectedUl({ element }: { element: any }) {
+function ConnectedUl() {
     return (
-        <div className={styles.connected_ul_li_container}>
-            <div className={styles.connected_ul_bullet} >
-                <div className={styles.connected_ul_bullet_marker} />
-            </div>
-            <div className={styles.connected_ul_li}>{element}</div>
-        </div>
+        <>
+            {
+                areas.map(area => {
+                    return <div className={styles.connected_ul_li_container}>
+                        <div className={styles.connected_ul_bullet}>
+                            <div className={styles.connected_ul_bullet_marker} />
+                        </div>
+                        <div className={styles.connected_ul_li}>{area}</div>
+                    </div>
+                })
+            }
+        </>
     )
 }
+
+export default NodeRestApiTestPage;

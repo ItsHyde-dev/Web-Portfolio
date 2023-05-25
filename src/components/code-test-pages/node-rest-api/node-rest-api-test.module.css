@@ -130,7 +130,6 @@
 }
 
 .signup_start {
-    margin-top: 2rem;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -143,4 +142,26 @@
     text-align: left;
     border-bottom: 1px solid rgba(180, 180, 180, 0.9);
     outline: none;
+    padding: 5px;
+    margin-top: 0.6rem;
+}
+
+.login_split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.json_rep {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    padding: 0;
+    white-space: pre-wrap;
 }
