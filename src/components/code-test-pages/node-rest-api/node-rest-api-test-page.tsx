@@ -8,7 +8,15 @@ export default function NodeRestApiTestPage() {
     return (
         <div>
             <Navbar highlight="projects" />
-            <div className={styles.title}>User Authentication Demo - NodeJs</div>
+            <div className={`
+                ${styles.title}
+                ${animation.slide_in_bottom}
+            `}>User Authentication Demo - NodeJs</div>
+            <div className={`
+            ${styles.expanding_divider}
+            ${position.vertical_center}
+            ${animation.expand_from_center}
+            `} />
             <h1 className={`
                 ${styles.heading}
                 ${animation.slide_in_left_small}
@@ -18,11 +26,6 @@ export default function NodeRestApiTestPage() {
                 ${styles.delay_subtext}
                 ${animation.slide_in_left_small}
             `}>Let's Test out how this works!</h3>
-            <div className={`
-                ${styles.expanding_divider}
-                ${position.vertical_center}
-                ${animation.expand_from_center}
-            `} />
         </div>
     )
 }

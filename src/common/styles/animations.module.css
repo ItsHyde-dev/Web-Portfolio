@@ -15,6 +15,21 @@
     animation-name: slide-in-left-small;
 }
 
+.slide_in_bottom {
+    animation: slide-in-bottom 0.5s linear;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 @keyframes expand-from-center {
     0% {
        transform: scaleX(0);
