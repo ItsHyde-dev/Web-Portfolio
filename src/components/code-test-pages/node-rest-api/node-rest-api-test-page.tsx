@@ -5,6 +5,7 @@ import animation from '../../../common/styles/animations.module.css'
 import position from '../../../common/styles/positioning.module.css'
 import techMap from '../../projects/techMap'
 import logoStyles from '../../../common/styles/logo.module.css'
+import areas from './sample-code-areas';
 
 export default function NodeRestApiTestPage() {
 
@@ -46,11 +47,25 @@ export default function NodeRestApiTestPage() {
             </div>
 
             <section className={styles.test_area}>
-               <ul className={styles.step_list}>
-                   <li>NodeJs</li>
-                   <li>MongoDB</li>
-               </ul>
+
+                {
+                    areas.map(area => {
+                        return connectedUl({ element: area })
+                    })
+                }
+
             </section>
+        </div>
+    )
+}
+
+function connectedUl({ element }: { element: any }) {
+    return (
+        <div className={styles.connected_ul_li_container}>
+            <div className={styles.connected_ul_bullet} >
+                <div className={styles.connected_ul_bullet_marker} />
+            </div>
+            <div className={styles.connected_ul_li}>{element}</div>
         </div>
     )
 }
