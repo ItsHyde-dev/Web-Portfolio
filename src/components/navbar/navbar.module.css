@@ -44,10 +44,18 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.navbar_my_name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 5rem;
+.start_logo {
+    display: flex;
+    aspect-ratio: 1/1;
+    width: 2.6rem;
+    border-radius: 50%;
+    background-color: rgba(100, 100, 100, 0.3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
 }
 
 .selected {

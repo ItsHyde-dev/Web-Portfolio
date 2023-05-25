@@ -10,6 +10,7 @@ import JsLogo from '../../assets/JavaScript-logo.png'
 import BevyLogo from '../../assets/bevy_logo_dark.png'
 import FlutterLogo from '../../assets/flutter-logo.png'
 import FirebaseLogo from '../../assets/firebase-logo-sized.png'
+import techMap from './techMap'
 
 const summaries = {
     "NodeJs Rest API":
@@ -36,53 +37,6 @@ const summaries = {
         <div>
             Cross Platform application made using Flutter with audio and text editing functions
         </div>
-}
-
-const techMap: { [key: string]: { logo: any, hover: string } } = {
-    "node": {
-        logo: NodeJsLogo,
-        hover: "Node JS"
-    },
-    "express": {
-        logo: ExpressLogo,
-        hover: "Express JS"
-    },
-    "dialogflow": {
-        logo: DialogFlowLogo,
-        hover: "Dialogflow"
-    },
-    "mongodb": {
-        logo: MongoLogo,
-        hover: "MongoDB"
-    },
-    "rust": {
-        logo: RustLogo,
-        hover: "Rust"
-    },
-    "python": {
-        logo: PythonLogo,
-        hover: "Python"
-    },
-    "go": {
-        logo: GoLogo,
-        hover: "Go"
-    },
-    "js": {
-        logo: JsLogo,
-        hover: "JavaScript"
-    },
-    "bevy": {
-        logo: BevyLogo,
-        hover: "Bevy Game Engine"
-    },
-    "flutter": {
-        logo: FlutterLogo,
-        hover: "Flutter"
-    },
-    "firebase": {
-        logo: FirebaseLogo,
-        hover: "Firebase"
-    },
 }
 
 const ProjectList = [

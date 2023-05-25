@@ -1,0 +1,39 @@
+.logos {
+    padding: 0 40px 0 0;
+    height: 24px;
+    cursor: pointer;
+}
+
+.tech_logos {
+    padding: 0 15px 0 0;
+    height: 1.2rem;
+}
+
+.tech_logos_container {
+    position: relative;
+}
+
+.tech_logos_container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    transform-origin: center;
+    left: 50%;
+    top: 0;
+    transform: translateY(-110%) translateX(-50%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 1rem;
+    background-color: black;
+    font-size: 0.8rem;
+    width: max-content;
+    scale: 0 0;
+}
+
+.tech_logos_container:hover::after {
+    scale: 1 1;
+    transition: scale 0.2s ease-in-out;
+}
+
+.logos:hover{
+    height: 30px;
+}

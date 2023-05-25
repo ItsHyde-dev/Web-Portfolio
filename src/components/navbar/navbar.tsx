@@ -20,6 +20,7 @@ function Navbar(props: { [key: string]: any }) {
     if (width > 768) {
         return (
             <div className={styles.navbar}>
+                <div className={styles.start_logo}>HJ</div>
                 <Link to="/" className={styles.router_link}>
                     {
                         buttonBuilder('Home')
