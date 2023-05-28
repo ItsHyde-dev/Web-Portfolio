@@ -13,7 +13,7 @@ function ContactPage() {
 
             <div className={styles.flex_row}>
                 <div className={styles.image_and_name_container} data-name="Himanshu Joshi">
-                    <img src={ContactImage} className={styles.contact_image}/>
+                    <img src={ContactImage} alt="" className={styles.contact_image}/>
                 </div>
 
             </div>

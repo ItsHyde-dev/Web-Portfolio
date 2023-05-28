@@ -73,8 +73,8 @@ function ProjectRow(props: any) {
                 </div>
 
 
-                <img src={githubLogo} className={styles.logos} onClick={() => openGithub(props.projectName)} />
-                <img src={codeLogo} className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
+                <img src={githubLogo} alt="GitHub" className={styles.logos} onClick={() => openGithub(props.projectName)} />
+                <img src={codeLogo} alt="</>" className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
             </div>
         </li>
     )
@@ -93,6 +93,7 @@ function showTechnologies(technologies: { [key: string]: any }[]) {
                     return (
                         <div key={technology.hover} className={styles.tech_logos_container} data-tooltip={technology.hover} >
                             <img
+                                alt={technology.hover}
                                 src={technology.logo}
                                 className={styles.tech_logos} />
                         </div>

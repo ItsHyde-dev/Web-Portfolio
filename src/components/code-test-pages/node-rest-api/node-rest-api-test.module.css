@@ -14,6 +14,10 @@
     color: limegreen;
 }
 
+b {
+    color: limegreen;
+}
+
 .logo_container {
     display: flex;
     flex-direction: row;
@@ -56,7 +60,6 @@
     display: flex;
     width: 70%;
     margin: auto;
-    margin-top: 4rem;
     flex-direction: column;
 }
 
@@ -83,15 +86,17 @@
 .connected_ul_li_container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
+    padding-top: 4rem;
 }
 
 .connected_ul_bullet {
     position: absolute;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 0.5rem;
     justify-content: center;
 }
 
@@ -116,22 +121,25 @@
 .connected_ul_li {
     margin-left: 2rem;
     font-size: 1rem;
+    width: 100%;
 }
 
-.test_area > .connected_ul_li_container:first-child > .connected_ul_bullet:first-child::before {
-    height: 70%;
-    top: 30%;
-}
+/* .test_area > .connected_ul_li_container:first-child > .connected_ul_bullet:first-child::before { */
+/* height: 70%; */
+/* top: 30%; */
+/* } */
 
 .code_area_text {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
+    margin-top: 0.2rem;
 }
 
-.signup_start {
+.ia_header_1 {
     font-size: 1.2rem;
     font-weight: bold;
+    width: max-content;
 }
 
 .input {
@@ -146,22 +154,123 @@
     margin-top: 0.6rem;
 }
 
-.login_split {
+.block_split {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-left: 30px;
 }
 
 .json_rep {
+    color: rgba(180, 180, 180, 1);
     font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
+    font-weight: 500;
+    display: block;
+    width: 25vw;
     justify-content: flex-start;
     text-align: left;
+    white-space: pre-wrap;
+    margin-left: 2rem;
+    overflow-wrap:break-word;
+}
+
+.demo_pane {
     margin-left: 5rem;
     margin-top: 2rem;
-    padding: 0;
-    white-space: pre-wrap;
+}
+
+.pad_top {
+    padding-top: 2rem;
+}
+
+.interactive_area {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: 'Mukta', sans-serif;
+}
+
+.signup_button {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    padding: 0.3rem 1rem;
+    background-color: limegreen;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+}
+
+.block_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+    color: limegreen;
+}
+
+.demo_pane_heading_text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.demo_pane {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.demo_pane::before {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 1px;
+    top: 0;
+    left: 0;background-color: rgba(180, 180, 180, 0.3);
+    animation: vertical-expand 1s ease-in-out;
+}
+
+@keyframes vertical-expand {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.subtext {
+    font-size: 0.8rem;
+    color: rgba(180, 180, 180, 1);
+    font-style: italic;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.block_content {
+    margin-left: 30px;
+    margin-top: 2rem;
+}
+
+.signup_login_button_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.smaller_text {
+    font-size: 0.8rem;
+    color: rgba(200, 200, 200, 1);
+    word-wrap: break-word;
+}
+
+.ia_header_2 {
+    font-size: 1rem;
 }

@@ -26,7 +26,7 @@ export default function Home() {
                 </div>
 
                 <div className={styles.image_container}>
-                    <img src={ContactImage} className={styles.contact_image} />
+                    <img src={ContactImage} className={styles.contact_image} alt=""/>
                 </div>
 
             </div>

@@ -5,7 +5,9 @@ import position from '../../../common/styles/positioning.module.css'
 import techMap from '../../projects/techMap'
 import logoStyles from '../../../common/styles/logo.module.css'
 import areas from './sample-code-areas';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function NodeRestApiTestPage() {
 
@@ -21,8 +23,8 @@ function NodeRestApiTestPage() {
             <div className={styles.logo_container}>
                 {
                     technologies.map(tech => {
-                        return <div className={logoStyles.tech_logos_container} data-tooltip={tech.hover}>
-                            <img src={tech.logo} className={logoStyles.tech_logos} />
+                        return <div className={logoStyles.tech_logos_container} data-tooltip={tech.hover} key={tech.hover}>
+                            <img src={tech.logo} className={logoStyles.tech_logos} alt={tech.hover} />
                         </div>
                     })
                 }
@@ -49,13 +51,23 @@ function NodeRestApiTestPage() {
             <section className={styles.test_area}>
                 <ConnectedUl />
             </section>
+
+            <ToastContainer position="bottom-left" theme="dark"/>
         </div>
     )
 }
 
+
+const jwtContextInit: { jwt: string, setJwt: any } = {jwt: '', setJwt: null}
+
+export const JwtProvider = createContext(jwtContextInit);
+
 function ConnectedUl() {
+
+    const [jwt, setJwt] = useState('');
+
     return (
-        <>
+        <JwtProvider.Provider value={{ jwt, setJwt }}>
             {
                 areas.map(area => {
                     return <div className={styles.connected_ul_li_container}>
@@ -66,7 +78,7 @@ function ConnectedUl() {
                     </div>
                 })
             }
-        </>
+        </JwtProvider.Provider>
     )
 }
 
