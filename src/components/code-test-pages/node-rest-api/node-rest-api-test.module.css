@@ -124,11 +124,6 @@ b {
     width: 100%;
 }
 
-/* .test_area > .connected_ul_li_container:first-child > .connected_ul_bullet:first-child::before { */
-/* height: 70%; */
-/* top: 30%; */
-/* } */
-
 .code_area_text {
     font-size: 1rem;
     font-weight: 300;

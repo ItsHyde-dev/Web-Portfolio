@@ -69,8 +69,8 @@ function ConnectedUl() {
     return (
         <JwtProvider.Provider value={{ jwt, setJwt }}>
             {
-                areas.map(area => {
-                    return <div className={styles.connected_ul_li_container}>
+                areas.map((area, index) => {
+                    return <div key={index} className={styles.connected_ul_li_container}>
                         <div className={styles.connected_ul_bullet}>
                             <div className={styles.connected_ul_bullet_marker} />
                         </div>

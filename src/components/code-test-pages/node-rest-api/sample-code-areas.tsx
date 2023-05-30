@@ -37,12 +37,10 @@ const IntroArea = () => {
                 return;
             }
 
-
             const body = await response.json();
 
             if (response.status == 400) {
                 console.log("API threw 400")
-                console.log(body.message)
                 toast.error(body.message)
             }
 

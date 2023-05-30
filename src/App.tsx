@@ -7,6 +7,7 @@ import ProjectPage from './components/projects/projects';
 import Crazy from './components/crazy/crazy';
 import './app.css'
 import NodeRestApiTestPage from './components/code-test-pages/node-rest-api/node-rest-api-test-page';
+import GoRestApiTestPage from './components/code-test-pages/go-rest-api/go-rest-api-test-page';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path="/projects">
                         <Route index element={<ProjectPage />} />
                         <Route path="/projects/nodeApiTest" element={<NodeRestApiTestPage />} />
+                        <Route path="/projects/golang-rest-api" element={<GoRestApiTestPage />} />
                     </Route>
                     <Route path="/crazy" element={<Crazy />} />
                     <Route path="*" element={<NotFoundPage />} />
