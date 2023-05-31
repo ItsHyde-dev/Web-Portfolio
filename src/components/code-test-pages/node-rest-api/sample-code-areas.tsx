@@ -1,7 +1,9 @@
 import { BaseSyntheticEvent, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
-import { JwtProvider } from './node-rest-api-test-page';
+import { JwtProvider } from '../common/components/connected_ul_object';
 import styles from './node-rest-api-test.module.css'
+import colors from '../../../common/styles/colors.module.css'
+
 
 const IntroArea = () => {
 
@@ -39,12 +41,12 @@ const IntroArea = () => {
 
             const body = await response.json();
 
-            if (response.status == 400) {
+            if (response.status === 400) {
                 console.log("API threw 400")
                 toast.error(body.message)
             }
 
-            if (response.status == 200) {
+            if (response.status === 200) {
                 setJwt(body.data.accessToken)
                 console.log(response)
                 toast.success('Login Successful');
@@ -57,8 +59,8 @@ const IntroArea = () => {
 
     return (
         <div className={styles.code_area_text}>
-            User Login and Signup is done using <b>username</b> and <b>password</b> <br />
-            This generates a  <b>json web token</b>
+            User Login and Signup is done using <b className={colors.limegreen}>username</b> and <b className={colors.limegreen}>password</b> <br />
+            This generates a  <b className={colors.limegreen}>json web token</b>
 
             <div className={styles.block_title}>Signup / Login </div>
 
@@ -90,13 +92,11 @@ const IntroArea = () => {
 
 const JwtGeneration = () => {
 
-    // TODO: Check if the user has logged in and set the jwt in this function
-
     const { jwt } = useContext(JwtProvider)
 
     return (
         <div className={styles.code_area_text}>
-            <div>Once the user has logged in a JWT <b>(json web token)</b> is generated</div>
+            <div>Once the user has logged in a JWT <b className={colors.limegreen}>(json web token)</b> is generated</div>
             <div className={styles.block_title}>JWT</div>
             <div className={styles.block_content}>
                 <div className={styles.interactiveArea}>
@@ -130,6 +130,8 @@ const LogoutArea = () => {
             return;
         }
 
+
+        // the body can be used later when the api is properly configured
         const body = await response.json()
 
         if (response.status === 400) {
@@ -146,7 +148,7 @@ const LogoutArea = () => {
 
     return (
         <div className={styles.code_area_text}>
-            <div>For logging out the client sends a <b>POST</b> request with the <b>JWT</b> in the header </div>
+            <div>For logging out the client sends a <b className={colors.limegreen}>POST</b> request with the <b className={colors.limegreen}>JWT</b> in the header </div>
             <div className={styles.block_title}>Logout </div>
             <div className={styles.block_split}>
                 <div className={styles.interactive_area}>

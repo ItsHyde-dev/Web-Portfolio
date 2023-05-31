@@ -129,6 +129,7 @@ b {
     font-weight: 300;
     line-height: 1.5rem;
     margin-top: 0.2rem;
+    padding-left: 1rem;
 }
 
 .ia_header_1 {
@@ -155,6 +156,7 @@ b {
     justify-content: space-between;
     align-items: center;
     margin-left: 30px;
+    position: relative;
 }
 
 .json_rep {
@@ -180,11 +182,11 @@ b {
 }
 
 .interactive_area {
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+    padding-top: 2rem;
     font-family: 'Mukta', sans-serif;
 }
 

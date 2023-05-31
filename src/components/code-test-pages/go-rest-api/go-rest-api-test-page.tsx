@@ -1,8 +1,8 @@
-import React from 'react'
 import Navbar from '../../navbar/navbar'
 import techMap from '../../projects/techMap'
-import styles from './go-rest-api-test-page.module.css'
 import logoStyles from '../../../common/styles/logo.module.css'
+import commonStyles from '../common/test-page-common-styles.module.css'
+import colors from '../../../common/styles/colors.module.css'
 
 export default function GoRestApiTestPage() {
 
@@ -11,8 +11,8 @@ export default function GoRestApiTestPage() {
     return (
         <div>
             <Navbar highlight="projects" />
-            <div className={styles.title}>User Authentication - <b>Go</b></div>
-            <div className={styles.logo_container}>
+            <div className={commonStyles.title}>User Authentication - <b className={colors.baby_blue}>Go</b></div>
+            <div className={commonStyles.logo_container}>
                 {
                     technologies.map(tech => {
                         return <div className={logoStyles.tech_logos_container} data-tooltip={tech.hover} key={tech.hover}>
@@ -21,6 +21,7 @@ export default function GoRestApiTestPage() {
                     })
                 }
             </div>
+
         </div>
     )
 }

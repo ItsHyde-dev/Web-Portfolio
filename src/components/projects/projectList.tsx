@@ -1,15 +1,3 @@
-import React from "react"
-import NodeJsLogo from '../../assets/nodejs-transparent.png'
-import ExpressLogo from '../../assets/express-logo.png'
-import DialogFlowLogo from '../../assets/dialogflow-logo.png'
-import MongoLogo from '../../assets/MongoDB_Spring-Green.svg'
-import RustLogo from '../../assets/rust-logo.png'
-import PythonLogo from '../../assets/python-logo.png'
-import GoLogo from '../../assets/Go_Logo_Blue.svg'
-import JsLogo from '../../assets/JavaScript-logo.png'
-import BevyLogo from '../../assets/bevy_logo_dark.png'
-import FlutterLogo from '../../assets/flutter-logo.png'
-import FirebaseLogo from '../../assets/firebase-logo-sized.png'
 import techMap from './techMap'
 
 const summaries = {

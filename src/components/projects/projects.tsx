@@ -1,4 +1,3 @@
-import React from "react"
 import Navbar from "../navbar/navbar"
 import styles from "./projects.module.css"
 import githubLogo from "../../assets/github-mark-white.svg"

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import styles from './navbar.module.css'
 function Navbar(props: { [key: string]: any }) {
@@ -6,7 +5,6 @@ function Navbar(props: { [key: string]: any }) {
     let width = window.innerWidth;
 
     const selectedClass = styles.selected;
-    const nav_button = styles.nav_button;
 
     const buttonBuilder = (name: string) => {
         let cssClass = styles.nav_button;

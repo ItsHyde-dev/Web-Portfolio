@@ -1,6 +1,4 @@
-import React from "react"
 import Navbar from "../navbar/navbar"
-import positioning from "../../common/styles/positioning.module.css"
 import styles from "./contact-page.module.css"
 import ContactImage from '../../assets/contact-image.jpeg'
 
