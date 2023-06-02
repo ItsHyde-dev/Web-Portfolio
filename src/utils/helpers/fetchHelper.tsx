@@ -7,7 +7,7 @@ interface Get {
 interface Post {
     url: string,
     headers: object | null,
-    body: object | null,
+    body: object,
 }
 
 export default class Fetch {

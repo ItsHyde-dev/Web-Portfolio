@@ -34,8 +34,8 @@ const IntroArea = () => {
     }
 
     const signup = async () => {
-        const url = `${process.env.REACT_APP_API_BASE_URL}/user/signup`
-        const body = await f.post({url, headers: null, body: jsonStructure})
+        const url = `${process.env.REACT_APP_API_BASE_URL}/user/createUser`
+        const body = await f.post({ url, headers: null, body: jsonStructure })
         if (body && body.accessToken) {
             setJwt(body.accessToken)
         }
@@ -101,36 +101,10 @@ const LogoutArea = () => {
     const { jwt, setJwt } = useContext(JwtProvider)
 
     const logout = async () => {
-
-        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/user/logout`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'accesstoken': jwt
-            }
-        })
-
-        if (!response) {
-            return;
-        }
-
-        if (!response.ok) {
-            return;
-        }
-
-
-        // the body can be used later when the api is properly configured
-        const body = await response.json()
-
-        if (response.status === 400) {
-            console.log("API threw 400")
-            return;
-        }
-
-        if (response.status === 200) {
+        const url = `${process.env.REACT_APP_API_BASE_URL}/user/logout`
+        const body = await f.post({ url, headers: { 'accesstoken': jwt }, body: {} })
+        if (body) {
             setJwt('')
-            toast.success('Logged out successfully')
-            return;
         }
     }
 
