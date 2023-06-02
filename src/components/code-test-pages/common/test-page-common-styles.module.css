@@ -123,3 +123,45 @@
     margin-top: 4rem;
     margin-bottom: 0.5rem;
 }
+
+.list_area {
+    padding-top: 2rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+.list_area_intro_text {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.list_area_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.list_area_block_split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    position: relative;
+}
+
+.list_area_block_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+.list_area_block_right {
+    position: relative;
+    padding-left: 3rem;
+}
