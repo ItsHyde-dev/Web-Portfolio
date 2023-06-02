@@ -3,7 +3,10 @@ import { toast } from 'react-toastify';
 import { JwtProvider } from '../common/components/connected_ul_object';
 import styles from './node-rest-api-test.module.css'
 import colors from '../../../common/styles/colors.module.css'
+import CommonListArea, { ListAreaTemplateProps } from '../common/components/list-area-template';
+import Fetch from '../../../utils/helpers/fetchHelper';
 
+const f = new Fetch()
 
 const IntroArea = () => {
 
@@ -23,70 +26,55 @@ const IntroArea = () => {
     const { setJwt } = useContext(JwtProvider)
 
     const login = async () => {
-
         const url = `${process.env.REACT_APP_API_BASE_URL}/user/login`
-        try {
-
-            let response: Response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(jsonStructure)
-            });
-
-            if (!response) {
-                return;
-            }
-
-            const body = await response.json();
-
-            if (response.status === 400) {
-                console.log("API threw 400")
-                toast.error(body.message)
-            }
-
-            if (response.status === 200) {
-                setJwt(body.data.accessToken)
-                console.log(response)
-                toast.success('Login Successful');
-            }
-
-        } catch (error) {
-            console.log("fetch error : ", error)
+        const body = await f.post({ url, headers: null, body: jsonStructure })
+        if (body && body.accessToken) {
+            setJwt(body.accessToken)
         }
     }
 
-    return (
-        <div className={styles.code_area_text}>
-            User Login and Signup is done using <b className={colors.limegreen}>username</b> and <b className={colors.limegreen}>password</b> <br />
-            This generates a  <b className={colors.limegreen}>json web token</b>
+    const signup = async () => {
+        const url = `${process.env.REACT_APP_API_BASE_URL}/user/signup`
+        const body = await f.post({url, headers: null, body: jsonStructure})
+        if (body && body.accessToken) {
+            setJwt(body.accessToken)
+        }
+    }
 
-            <div className={styles.block_title}>Signup / Login </div>
 
-            <div className={styles.block_split}>
-                <div className={styles.interactive_area}>
-                    <div className={styles.ia_header_1}>Enter your username: </div>
-                    <input type="text" placeholder="username" onChange={usernameHandler} className={styles.input} />
-                    <div className={`
-                        ${styles.ia_header_1}
-                        ${styles.pad_top}
-                    `}>Enter your password: </div>
-                    <input type="password" placeholder="password" onChange={passwordHandler} className={styles.input} />
+    const introText =
+        <div> User Login and Signup is done using <b className={colors.limegreen}>username</b> and < b className={colors.limegreen} > password</b > <br />
+            This generates a < b className={colors.limegreen} > json web token</b > </div>
 
-                    <div className={styles.signup_login_button_container}>
-                        <div className={styles.signup_button} onClick={() => console.log(jsonStructure)}>Sign up</div>
-                        <div className={styles.signup_button} onClick={login}>Login</div>
-                    </div>
 
-                </div>
-                <div className={styles.demo_pane}>
-                    <div className={styles.demo_pane_heading_text} >Request Body: </div>
-                    <div className={styles.json_rep}>{JSON.stringify(jsonStructure, null, 6)}</div>
-                </div>
+    const leftBlockChildComponent =
+        <div>
+            <div className={styles.ia_header_1}>Enter your username: </div>
+            <input type="text" placeholder="username" onChange={usernameHandler} className={styles.input} />
+            <div className={`
+                ${styles.ia_header_1}
+                ${styles.pad_top}
+                `}>Enter your password: </div>
+            <input type="password" placeholder="password" onChange={passwordHandler} className={styles.input} />
+
+            <div className={styles.signup_login_button_container}>
+                <div className={styles.signup_button} onClick={signup}>Sign up</div>
+                <div className={styles.signup_button} onClick={login}>Login</div>
             </div>
         </div>
-    )
+
+
+    const listAreaProps: ListAreaTemplateProps = {
+        introText,
+        title: "Signup / Login",
+        leftBlockTitle: null,
+        rightBlockTitle: "Request Body: ",
+        leftBlockChildComponent,
+        rightBlockChildComponent: JSON.stringify(jsonStructure, null, 6)
+    }
+
+
+    return CommonListArea(listAreaProps)
 
 }
 
