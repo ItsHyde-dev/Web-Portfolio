@@ -1,33 +1,6 @@
-.flex_row {
-    display: flex;
-    flex-direction: row;
-}
-
-.contact_image {
-    height: 20rem;
-    border-radius: 50%;
-    margin-left: 40px;
-}
-
-.image_and_name_container {
-    position: relative;
-    width: min-content;
-    height: min-content;
-    text-align: center;
-}
-
-.image_and_name_container::after {
-    position: absolute;
-    width: 100%;
-    left: 10px;
-    bottom: 0;
-    content: attr(data-name);
-    transform: translateY(200%);
-}
-
 .heading{
     font-size: 2.5rem;
     font-weight: bold;
-    padding: 50px 0 100px 40px;
+    padding: 2rem 0 1.5rem 0;
     text-align: center;
 }

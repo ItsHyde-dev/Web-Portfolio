@@ -1,22 +1,17 @@
 import Navbar from "../navbar/navbar"
 import styles from "./contact-page.module.css"
-import ContactImage from '../../assets/contact-image.jpeg'
+import animation from '../../common/styles/animations.module.css'
+import commonStyles from '../../common/styles/css-components.module.css'
 
-function ContactPage() {
+
+function AboutPage() {
     return (
         <>
-            <Navbar highlight="contact"/>
-
-            <div className={styles.heading}>Contact Me</div>
-
-            <div className={styles.flex_row}>
-                <div className={styles.image_and_name_container} data-name="Himanshu Joshi">
-                    <img src={ContactImage} alt="" className={styles.contact_image}/>
-                </div>
-
-            </div>
+            <Navbar highlight="about" />
+            <div className={styles.heading}>About Me</div>
+            <div className={`${commonStyles.ehl} ${animation.expand_from_center}`} />
         </>
     )
 }
 
-export default ContactPage
+export default AboutPage
