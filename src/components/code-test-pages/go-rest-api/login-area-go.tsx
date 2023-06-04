@@ -1,24 +1,22 @@
 import CommonListArea, { ListAreaTemplateProps } from "../common/components/list-area-template"
 import colors from '../../../common/styles/colors.module.css'
-import styles from '../node-rest-api/node-rest-api-test.module.css'
+import styles from '../common/test-page-common-styles.module.css'
 import { BaseSyntheticEvent, useContext, useState } from "react";
 import { JwtProvider } from "../common/components/connected_ul_object";
 import Fetch from "../../../utils/helpers/fetchHelper";
+import { toast } from "react-toastify";
 
 const f = new Fetch()
-
-
-//TODO: Change the React api base url to separate node and go apis
 
 export default function LoginAreaGo() {
 
     const [jsonStructure, setJsonStructure] = useState({
-        username: '',
+        email: '',
         password: ''
     });
 
-    const usernameHandler = (event: BaseSyntheticEvent) => {
-        setJsonStructure({ ...jsonStructure, username: event.target.value });
+    const emailHandler = (event: BaseSyntheticEvent) => {
+        setJsonStructure({ ...jsonStructure, email: event.target.value });
     }
 
     const passwordHandler = (event: BaseSyntheticEvent) => {
@@ -28,18 +26,19 @@ export default function LoginAreaGo() {
     const { setJwt } = useContext(JwtProvider)
 
     const login = async () => {
-        const url = `${process.env.REACT_APP_API_BASE_URL}/user/login`
+        const url = `${process.env.REACT_APP_GO_USER_AUTH_API_BASE_URL}/auth/login`
         const body = await f.post({ url, headers: null, body: jsonStructure })
+        console.log({body})
         if (body && body.accessToken) {
             setJwt(body.accessToken)
         }
     }
 
     const signup = async () => {
-        const url = `${process.env.REACT_APP_API_BASE_URL}/user/createUser`
+        const url = `${process.env.REACT_APP_GO_USER_AUTH_API_BASE_URL}/auth/signup`
         const body = await f.post({ url, headers: null, body: jsonStructure })
-        if (body && body.accessToken) {
-            setJwt(body.accessToken)
+        if (body) {
+            toast.info("Please login to continue")
         }
     }
 
@@ -47,23 +46,16 @@ export default function LoginAreaGo() {
         <div> User Login and Signup is done using <b className={colors.baby_blue}>username</b> and < b className={colors.baby_blue} > password</b > <br />
             This generates a < b className={colors.baby_blue} > json web token</b > </div>
 
-
-
-    // TODO: change the signup and login button colors to baby_blue
-
     const leftBlockChildComponent =
         <div>
-            <div className={styles.ia_header_1}>Enter your username: </div>
-            <input type="text" placeholder="username" onChange={usernameHandler} className={styles.input} />
-            <div className={`
-                ${styles.ia_header_1}
-                ${styles.pad_top}
-                `}>Enter your password: </div>
+            <div className={styles.block_h1}>Enter your Username / Email: </div>
+            <input type="text" placeholder="username / email@xyz.com" onChange={emailHandler} className={styles.input} />
+            <div className={styles.block_h1}>Enter your password: </div>
             <input type="password" placeholder="password" onChange={passwordHandler} className={styles.input} />
 
-            <div className={styles.signup_login_button_container}>
-                <div className={styles.signup_button} onClick={signup}>Sign up</div>
-                <div className={styles.signup_button} onClick={login}>Login</div>
+            <div className={styles.logo_container}>
+                <button className={styles.button2} onClick={signup}>Sign up</button>
+                <button className={styles.button2} onClick={login}>Login</button>
             </div>
         </div>
 

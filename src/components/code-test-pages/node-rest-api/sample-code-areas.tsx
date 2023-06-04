@@ -1,5 +1,4 @@
 import { BaseSyntheticEvent, useContext, useState } from 'react';
-import { toast } from 'react-toastify';
 import { JwtProvider } from '../common/components/connected_ul_object';
 import styles from './node-rest-api-test.module.css'
 import colors from '../../../common/styles/colors.module.css'
@@ -26,7 +25,7 @@ const IntroArea = () => {
     const { setJwt } = useContext(JwtProvider)
 
     const login = async () => {
-        const url = `${process.env.REACT_APP_API_BASE_URL}/user/login`
+        const url = `${process.env.REACT_APP_NODE_USER_AUTH_API_BASE_URL}/user/login`
         const body = await f.post({ url, headers: null, body: jsonStructure })
         if (body && body.accessToken) {
             setJwt(body.accessToken)
@@ -34,7 +33,7 @@ const IntroArea = () => {
     }
 
     const signup = async () => {
-        const url = `${process.env.REACT_APP_API_BASE_URL}/user/createUser`
+        const url = `${process.env.REACT_APP_NODE_USER_AUTH_API_BASE_URL}/user/createUser`
         const body = await f.post({ url, headers: null, body: jsonStructure })
         if (body && body.accessToken) {
             setJwt(body.accessToken)
@@ -101,7 +100,7 @@ const LogoutArea = () => {
     const { jwt, setJwt } = useContext(JwtProvider)
 
     const logout = async () => {
-        const url = `${process.env.REACT_APP_API_BASE_URL}/user/logout`
+        const url = `${process.env.REACT_APP_NODE_USER_AUTH_API_BASE_URL}/user/logout`
         const body = await f.post({ url, headers: { 'accesstoken': jwt }, body: {} })
         if (body) {
             setJwt('')

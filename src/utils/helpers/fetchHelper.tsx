@@ -1,10 +1,10 @@
 import { toast } from "react-toastify";
 
-interface Get {
+export interface Get {
     url: string
 }
 
-interface Post {
+export interface Post {
     url: string,
     headers: object | null,
     body: object,

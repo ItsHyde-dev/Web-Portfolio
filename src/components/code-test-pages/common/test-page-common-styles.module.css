@@ -125,7 +125,7 @@
 }
 
 .list_area {
-    padding-top: 2rem;
+    padding-top: 0.3rem;
     font-size: 1.2rem;
     font-family: 'Mukta', sans-serif;
 }
@@ -140,7 +140,6 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 4rem;
-    margin-bottom: 0.5rem;
 }
 
 .list_area_block_split {
@@ -168,4 +167,89 @@
     padding-left: 4rem;
     padding-right: max(3rem, 20%);
     white-space: pre-line;
+}
+
+.list_area_block_right::before {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 1px;
+    top: 0;
+    left: 0;background-color: rgba(180, 180, 180, 0.3);
+    animation: vertical-expand 1s ease-in-out;
+}
+
+@keyframes vertical-expand {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+/* specific components */
+
+.block_h1 {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: max-content;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.9);
+    outline: none;
+    padding: 5px;
+    margin-top: 0.6rem;
+}
+
+.button1 {
+    border: 0;
+    background: transparent;
+    background-color: limegreen;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+}
+
+.button2 {
+    border: 0;
+    background: transparent;
+    background-color: #00ACD7;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+}
+
+.italics_subtext {
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 0.2rem;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
