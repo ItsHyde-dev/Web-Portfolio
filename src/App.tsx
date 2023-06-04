@@ -6,7 +6,7 @@ import Crazy from './components/crazy/crazy';
 import './app.css'
 import NodeRestApiTestPage from './components/code-test-pages/node-rest-api/node-rest-api-test-page';
 import GoRestApiTestPage from './components/code-test-pages/go-rest-api/go-rest-api-test-page';
-import AboutPage from './components/contact-page/contact-page';
+import AboutPage from './components/about-page/about-page';
 
 const App = () => {
     return (
