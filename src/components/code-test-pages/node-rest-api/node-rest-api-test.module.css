@@ -14,10 +14,6 @@
     color: limegreen;
 }
 
-b {
-    color: limegreen;
-}
-
 .logo_container {
     display: flex;
     flex-direction: row;

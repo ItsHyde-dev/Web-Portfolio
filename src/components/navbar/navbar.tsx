@@ -31,6 +31,11 @@ function Navbar(props: { [key: string]: any }) {
                     buttonBuilder('About')
                 }
             </Link>
+            <Link to="/contact" className={styles.router_link}>
+                {
+                    buttonBuilder('Contact')
+                }
+            </Link>
         </div>
     )
 }

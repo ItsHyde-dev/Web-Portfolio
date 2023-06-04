@@ -1,0 +1,42 @@
+.contact_info_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: Rubik, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-left: 5%;
+}
+
+.contact_info_container th {
+    text-align: left;
+    padding-right: 4rem;
+}
+
+.contact_info_container td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #141414;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.contact_info_container svg {
+    cursor: pointer;
+    margin-left: auto;
+    padding-left: 0.8rem;
+    height: 1.3rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
