@@ -1,0 +1,9 @@
+
+/*  expanding horizontal line */
+.ehl {
+    width: 90%;
+    margin: auto;
+    height: 1px;
+    background-color: rgba(180, 180, 180, 0.3);
+    animation-duration: 1s;
+}

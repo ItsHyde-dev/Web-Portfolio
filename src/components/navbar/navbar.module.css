@@ -10,6 +10,8 @@
 
 .nav_button{
     position: relative;
+    background: transparent;
+    border: none;
     padding: 10px 0 10px 0;
     font-size: 1rem;
     font-weight: 500;

@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import styles from './navbar.module.css'
 function Navbar(props: { [key: string]: any }) {
 
-    let width = window.innerWidth;
-
     const selectedClass = styles.selected;
 
     const buttonBuilder = (name: string) => {
@@ -12,36 +10,34 @@ function Navbar(props: { [key: string]: any }) {
             cssClass += ` ${selectedClass}`;
         }
 
-        return <div className={cssClass}>{name}</div>
+        return <button className={cssClass}>{name}</button>
     }
 
-    if (width > 768) {
-        return (
-            <div className={styles.navbar}>
-                <div className={styles.start_logo}>HJ</div>
-                <Link to="/" className={styles.router_link}>
-                    {
-                        buttonBuilder('Home')
-                    }
-                </Link>
-                <Link to="/projects" className={styles.router_link}>
-                    {
-                        buttonBuilder('Projects')
-                    }
-                </Link>
-                <Link to="/contact" className={styles.router_link}>
-                    {
-                        buttonBuilder('Contact')
-                    }
-                </Link>
-            </div>
-        )
-    }
-    else {
-        return (
-            <div>The width is small</div>
-        )
-    }
+    return (
+        <div className={styles.navbar}>
+            <div className={styles.start_logo}>HJ</div>
+            <Link to="/" className={styles.router_link}>
+                {
+                    buttonBuilder('Home')
+                }
+            </Link>
+            <Link to="/projects" className={styles.router_link}>
+                {
+                    buttonBuilder('Projects')
+                }
+            </Link>
+            <Link to="/about" className={styles.router_link}>
+                {
+                    buttonBuilder('About')
+                }
+            </Link>
+            <Link to="/contact" className={styles.router_link}>
+                {
+                    buttonBuilder('Contact')
+                }
+            </Link>
+        </div>
+    )
 }
 
 export default Navbar
