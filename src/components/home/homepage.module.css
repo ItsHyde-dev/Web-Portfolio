@@ -17,6 +17,7 @@
     font-size: 3rem;
     width: 69%;
     animation-duration: 5s;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .row{
@@ -25,79 +26,6 @@
     align-items: center;
 }
 
-@media (width < 768px) {
-    .contact_image{
-        display: none;
-    }
-    .image_container{
-        display: none;
-    }
-}
-
-@media (width > 768px) {
-    .contact_image {
-        position: relative;
-        height: 10rem;
-        border-radius: 50%;
-        aspect-ratio: 1/1;
-    }
-
-    .image_container {
-        position: relative;
-        border-radius: 50%;
-        margin-left: 100px;
-        margin-right: 15%;
-        aspect-ratio: 1/1;
-    }
-
-    .image_container::after,
-    .image_container::before
-    {
-        content: "";
-        position: absolute;
-        border-radius: inherit;
-        width: 105%;
-        aspect-ratio: 1/1;
-        inset: 0;
-        transform-origin: center;
-        background-image: conic-gradient(from var(--gradient-angle), #ff1cdd, #2c04de);
-        transform: translateX(-2.5%) translateY(-2.5%);
-        animation: rotate-gradient 10s linear infinite;
-        z-index: -1;
-    }
-
-    .image_container::before{
-        filter: blur(3rem);
-        transform: translateX(-12.5%) translateY(-12.5%);
-        animation:
-            rotate-gradient 10s linear infinite,
-            pulse 3s alternate infinite;
-        ;
-    }
-
-    @keyframes rotate-gradient {
-        0% {
-            --gradient-angle: 0deg;
-        }
-        100% {
-            --gradient-angle: 360deg;
-        }
-    }
-
-    @keyframes pulse {
-        0% {
-            width: 130%;
-            height: 130%;
-            transform: translateX(-12.5%) translateY(-12.5%);
-        }
-        100% {
-            width: 150%;
-            height: 150%;
-            transform: translateX(-17.5%) translateY(-17.5%);
-        }
-    }
-
-}
 
 .italics {
     font-style: italic;
@@ -106,7 +34,8 @@
 .small1 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: rgba(180, 180, 180, 1)
+    color: rgba(180, 180, 180, 1);
+    transition: font-size 0.3s ease-in-out;
 }
 
 .ht {
@@ -117,11 +46,13 @@
     margin: 0;
     animation-name: slide-in-left;
     animation-duration: 1s;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .ht2{
     font-size: 3rem;
     animation-duration: 1.25s;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .header_div {
@@ -157,4 +88,90 @@
     100% {
         transform: translateY(0);
     }
+}
+
+@media (width < 768px) {
+    .contact_image{
+        display: none;
+    }
+    .image_container{
+        display: none;
+    }
+    .ht {
+        font-size: 3rem;
+    }
+    .ht2 {
+        font-size: 2.5rem;
+    }
+    .parah_text {
+        font-size: 2.5rem;
+    }
+    .small1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact_image {
+        position: relative;
+        height: 10rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+    }
+
+    .image_container {
+        position: relative;
+        border-radius: 50%;
+        margin-left: 100px;
+        margin-right: 15%;
+        aspect-ratio: 1/1;
+    }
+
+    .image_container::after,
+    .image_container::before
+    {
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        width: 105%;
+        aspect-ratio: 1/1;
+        inset: 0;
+        transform-origin: center;
+        background-image: conic-gradient(from var(--gradient-angle), #ff1cdd, #2c04de);
+        transform: translateX(-2.5%) translateY(-2.5%);
+        animation: rotate-gradient 10s linear infinite;
+        z-index: -1;
+    }
+
+    .image_container::before{
+        filter: blur(3rem);
+        transform: translateX(-12.5%) translateY(-12.5%);
+        animation:
+        rotate-gradient 10s linear infinite,
+        pulse 3s alternate infinite;
+        ;
+    }
+
+    @keyframes rotate-gradient {
+        0% {
+            --gradient-angle: 0deg;
+        }
+        100% {
+            --gradient-angle: 360deg;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            width: 130%;
+            height: 130%;
+            transform: translateX(-12.5%) translateY(-12.5%);
+        }
+        100% {
+            width: 150%;
+            height: 150%;
+            transform: translateX(-17.5%) translateY(-17.5%);
+        }
+    }
+
 }

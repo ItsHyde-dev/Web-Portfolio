@@ -57,12 +57,12 @@ function HomepageTopSection() {
         <>
             <div className={styles.row}>
                 <div className={styles.header_div}>
-                    <h1 className={`
+                    <div className={`
                     ${styles.ht}
                     ${animation.slide_in_left}
                 `}>
                         Hello <br />
-                    </h1>
+                    </div>
                     <h2 className={`
                     ${styles.ht}
                     ${styles.ht2}
