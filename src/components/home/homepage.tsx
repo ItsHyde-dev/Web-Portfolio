@@ -5,8 +5,18 @@ import position from '../../common/styles/positioning.module.css'
 import ContactImage from '../../assets/contact-image.jpeg'
 import { ContactInformation } from '../contact-page/contact-page'
 import { ToastContainer } from 'react-toastify'
+import { BsChevronDoubleDown } from 'react-icons/bs'
+import { useRef } from 'react'
+
 
 export default function Home() {
+
+    const ref = useRef<null | HTMLDivElement>(null)
+
+    const scrollToContactInfo = () => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return (
         <div>
             <div className={styles.top_section}>
@@ -15,7 +25,6 @@ export default function Home() {
                 <div className={position.vertical_center}>
                     <p className={`
                     ${styles.parah_text}
-                    ${styles.italics}
                     ${animation.fade_in}
                 `}>" Hard work unlocks the hidden potential of talent "</p>
                     <p className={`
@@ -23,16 +32,18 @@ export default function Home() {
                     ${styles.small1}
                     ${animation.fade_in}
                 `}>
-                As a highly skilled and versatile software engineer,
-                I have honed my abilities in multiple programming languages,
-                allowing me to bring a diverse range of expertise to any project.<br/>
-                With a keen eye for problem-solving and a commitment to excellence,
-                I strive to create innovative software solutions that surpass expectations.<br/>
-                Explore the demos of my personal projects on the project page.  </p>
+                        As a highly skilled and versatile software engineer,
+                        I have honed my abilities in multiple programming languages,
+                        allowing me to bring a diverse range of expertise to any project.<br />
+                        With a keen eye for problem-solving and a commitment to excellence,
+                        I strive to create innovative software solutions that surpass expectations.<br />
+                        Explore the demos of my personal projects on the project page.  </p>
                 </div>
             </div>
-            <div className={`${position.vertical_center} ${styles.contact_me_title}`}>Contact Me</div>
-            <ContactInformation />
+            <div className={`${position.vertical_center} ${styles.contact_me_title}`} onClick={scrollToContactInfo}>Contact Me <BsChevronDoubleDown /></div>
+            {
+                ContactInformation(ref)
+            }
             <ToastContainer
                 position="bottom-left"
                 theme="dark"

@@ -11,7 +11,8 @@
 }
 
 .parah_text {
-    font-family: 'Poppins';
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     text-align: center;
     font-size: 3rem;
     width: 69%;
@@ -104,7 +105,8 @@
 
 .small1 {
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 300;
+    color: rgba(180, 180, 180, 1)
 }
 
 .ht {
@@ -136,9 +138,23 @@
 
 .contact_me_title {
     height: 10vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Rubik';
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

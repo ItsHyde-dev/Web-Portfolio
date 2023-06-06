@@ -8,10 +8,12 @@ function AboutPage() {
     return (
         <>
             <Navbar highlight="about" />
-            <div>About Me</div>
-            <p>I have been programming for roughly 6 years. These years have taught me much about how to code solutions to a problem.</p>
-            <p>Hi! I am Himanshu Joshi <br/>I am a passionate software developer with a bachelor degree in Information Technology and an out of the box approach</p>
-            <p>I have a track record of delivering high-quality code in a fast-paced environment</p>
+            <h1 className={styles.heading}>About Me</h1>
+            <div className={styles.intro_para}>Hello, I'm <b> Himanshu Joshi</b>, a passionate software engineer with a love for logical thinking and crafting optimized solutions to programming challenges. <br />
+                With over 6 years of experience in software development, I bring a diverse skill set that spans multiple programming languages, frameworks, and technologies. <br />
+                I thrive on the thrill of solving complex problems and take pride in engineering efficient and scalable solutions. <br />
+                Through my dedication to continuous learning, I stay up-to-date with the latest industry trends and best practices. <br />
+                Welcome to my personal website, where you'll get a glimpse into my journey as a software engineer and the exciting projects I've had the privilege to work on.</div>
         </>
     )
 }

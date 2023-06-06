@@ -27,7 +27,7 @@ export default function ContactPage() {
     )
 }
 
-export function ContactInformation() {
+export function ContactInformation(ref: any) {
 
     const copyEmail = () => {
         navigator.clipboard.writeText('heyitshyde@gmail.com')
@@ -40,7 +40,7 @@ export function ContactInformation() {
     }
 
     return (
-        <div className={styles.contact_info_container}>
+        <div ref={ref} className={styles.contact_info_container}>
             <div className={styles.grid}>
                     <div className={styles.info_desc} >Name</div>
                     <div className={styles.info_text}>Himanshu Joshi <FaRegCopy onClick={copyName} /></div>
