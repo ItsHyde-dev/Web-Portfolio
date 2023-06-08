@@ -1,7 +1,6 @@
 import Navbar from "../navbar/navbar"
 import styles from "./about-page.module.css"
 import animation from '../../common/styles/animations.module.css'
-import position from '../../common/styles/positioning.module.css'
 import commonStyles from '../../common/styles/css-components.module.css'
 import { ReactNode } from "react"
 import { FaDownload } from "react-icons/fa"
