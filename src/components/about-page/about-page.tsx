@@ -14,8 +14,7 @@ function AboutPage() {
             <Navbar highlight="about" />
 
             <div className={styles.header_container}>
-                <h1 className={styles.heading}>Himanshu Joshi
-                </h1>
+                <div className={styles.heading}>Himanshu Joshi</div>
                 <a
                     href={require("../../assets/Resume-Himanshu Joshi.pdf")}
                     download="Resume-Himanshu Joshi.pdf"

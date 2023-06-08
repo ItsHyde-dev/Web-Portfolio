@@ -70,23 +70,32 @@ li::marker{
     flex-direction: row;
     align-items: center;
     padding: 20px 0 20px 0;
+    justify-content: center;
+    max-width: calc(100% - 60px);
 }
 
 .project_row:hover {
     background-color: rgba(180, 180, 180, 0.02);
 }
 
+
 .project_info_column {
     font-size: 1.1rem;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
+    max-width: calc(100% - 80px);
 }
 
 .logos {
     padding: 0 40px 0 0;
     height: 24px;
     cursor: pointer;
+}
+
+.project_row_link_logos {
+    display: flex;
+    flex-direction: row;
 }
 
 .tech_logos {
@@ -151,5 +160,18 @@ li::marker{
     scale: 1 1;
     transform: translateY(-130%) translateX(-50%);
     transition: scale 0.1s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .project_row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project_row_link_logos {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+    }
 }
 
