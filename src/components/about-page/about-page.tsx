@@ -1,8 +1,10 @@
 import Navbar from "../navbar/navbar"
 import styles from "./about-page.module.css"
 import animation from '../../common/styles/animations.module.css'
+import position from '../../common/styles/positioning.module.css'
 import commonStyles from '../../common/styles/css-components.module.css'
 import { ReactNode } from "react"
+import { FaDownload } from "react-icons/fa"
 
 function AboutPage() {
 
@@ -11,7 +13,19 @@ function AboutPage() {
     return (
         <>
             <Navbar highlight="about" />
-            <h1 className={styles.heading}>Himanshu Joshi</h1>
+
+            <div className={styles.header_container}>
+                <h1 className={styles.heading}>Himanshu Joshi
+                </h1>
+                <a
+                    href={require("../../assets/Resume-Himanshu Joshi.pdf")}
+                    download="Resume-Himanshu Joshi.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Resume <FaDownload />
+                </a>
+            </div>
             <div className={expandingLine} />
             <div className={styles.body_area}>
                 <div className={styles.left_area}>
@@ -143,8 +157,8 @@ function FTDArticleList() {
             </div>
         },
         {
-                title: "Future Scope",
-                body: <div>
+            title: "Future Scope",
+            body: <div>
                 <p>
                     Adding more cool features to this website and maybe making a dedicated backend just for this website will be coming in the future.
                 </p>
@@ -155,8 +169,8 @@ function FTDArticleList() {
                     A section for advice or a contact section where people can send me messages directly will be added.
                     Might configure an smtp server for that. Maybe it's already in the works 😉
                 </p>
-                </div>
-            }
+            </div>
+        }
     ]
 
     return (

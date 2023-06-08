@@ -2,8 +2,27 @@
     font-family: Rubik;
     font-size: 2.5rem;
     font-weight: 500;
-    padding: 2rem 0 1rem 0;
     text-align: center;
+}
+
+.header_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    position: relative;
+}
+
+.header_container a {
+    left: 50%;
+    bottom: 1.675rem;
+    position: absolute;
+    text-decoration: none;
+    color: limegreen;
+    padding-left: 2rem;
+    transform: translateX(150%) translateY(-100%);
 }
 
 .intro_para {
