@@ -33,7 +33,7 @@ export default function LogoutAreaGo() {
             }
 
             const body = await f.post(params)
-            if (body != null || body != undefined) {
+            if (body !== null || body !== undefined) {
                 setJwt("")
             }
         }

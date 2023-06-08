@@ -39,14 +39,14 @@ const ProjectList = [
         title: "Graph Traversal Algorithms",
         summary: summaries['Graph Traversal Algorithms'],
         projectName: "graph traversal",
-        codeUrl: "/graphTraversal",
+        codeUrl: "",
         technologies: [techMap.rust, techMap.go, techMap.python, techMap.js],
     },
     {
         title: "2D RPG Game",
         summary: summaries['2D RPG Game'],
         projectName: "bevy-game-1",
-        codeUrl: "/bevy-game-1",
+        codeUrl: "",
         technologies: [techMap.rust, techMap.bevy],
     },
     {
@@ -60,7 +60,7 @@ const ProjectList = [
         title: "Helix: Writing Application for Musicians",
         summary: summaries['Helix'],
         projectName: "helix",
-        codeUrl: "/helix",
+        codeUrl: "",
         technologies: [techMap.flutter, techMap.firebase],
     },
 ]

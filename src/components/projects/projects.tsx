@@ -71,9 +71,14 @@ function ProjectRow(props: any) {
                     }
                 </div>
 
-
+                {
+                    (props.codeUrl.length) ?
+                        <div className={styles.code_logo}>
+                            <img src={codeLogo} alt="</>" className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
+                        </div>
+                        : null
+                }
                 <img src={githubLogo} alt="GitHub" className={styles.logos} onClick={() => openGithub(props.projectName)} />
-                <img src={codeLogo} alt="</>" className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
             </div>
         </li>
     )

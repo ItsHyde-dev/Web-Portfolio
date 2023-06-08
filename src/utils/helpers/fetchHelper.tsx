@@ -49,7 +49,7 @@ export default class Fetch {
 
         const body = await response.json();
 
-        if (response.status != 200) {
+        if (response.status !== 200) {
             toast.error(body.message);
         }
 

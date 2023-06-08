@@ -123,11 +123,33 @@ li::marker{
     height: 30px;
 }
 
-.test_code_logo {
-    padding: 0 40px 0 0;
-}
-
 .project_technologies_header {
     font-size: 0.8rem;
     padding: 20px 0 10px 0;
 }
+
+.code_logo {
+    position: relative;
+}
+
+.code_logo::before {
+    position: absolute;
+    padding-right: 40px;
+    left: 50%;
+    top: 0;
+    width: max-content;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: rgba(180, 180, 180, 0.8);
+    content: "Project Demo";
+    border-radius: 2rem;
+    transform: translateX(-50%);
+    scale: 1 0;
+}
+
+.code_logo:hover::before {
+    scale: 1 1;
+    transform: translateY(-130%) translateX(-50%);
+    transition: scale 0.1s ease-in-out;
+}
+
