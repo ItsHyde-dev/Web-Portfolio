@@ -2,7 +2,6 @@
     font-family: Rubik;
     font-size: 2.5rem;
     font-weight: 500;
-    text-align: center;
 }
 
 .header_container {
@@ -17,12 +16,34 @@
 
 .header_container a {
     left: 50%;
-    bottom: 1.675rem;
+    bottom: 0;
     position: absolute;
     text-decoration: none;
-    color: limegreen;
+    font-size: 1rem;
+    color: lightskyblue;
     padding-left: 2rem;
     transform: translateX(150%) translateY(-100%);
+}
+
+@media (max-width: 900px) {
+    .header_container a {
+        position: relative;
+        padding: 0;
+        padding-top: 1rem;
+        left: 0;
+        bottom: 0;
+        font-size: 0.8rem;
+        transform: none;
+    }
+
+    .header_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
 }
 
 .intro_para {

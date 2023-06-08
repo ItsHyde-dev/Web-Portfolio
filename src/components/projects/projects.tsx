@@ -70,15 +70,16 @@ function ProjectRow(props: any) {
                         showTechnologies(props.technologies)
                     }
                 </div>
-
-                {
-                    (props.codeUrl.length) ?
-                        <div className={styles.code_logo}>
-                            <img src={codeLogo} alt="</>" className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
-                        </div>
-                        : null
-                }
-                <img src={githubLogo} alt="GitHub" className={styles.logos} onClick={() => openGithub(props.projectName)} />
+                <div className={styles.project_row_link_logos}>
+                    {
+                        (props.codeUrl.length) ?
+                            <div className={styles.code_logo}>
+                                <img src={codeLogo} alt="</>" className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
+                            </div>
+                            : null
+                    }
+                    <img src={githubLogo} alt="GitHub" className={styles.logos} onClick={() => openGithub(props.projectName)} />
+                </div>
             </div>
         </li>
     )
