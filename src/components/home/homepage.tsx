@@ -26,7 +26,7 @@ export default function Home() {
                     <p className={`
                     ${styles.parah_text}
                     ${animation.fade_in}
-                `}>" Hard work unlocks the hidden potential of talent "</p>
+                `}>Hard work unlocks the hidden potential of talent</p>
                     <p className={`
                     ${styles.parah_text}
                     ${styles.small1}
@@ -68,7 +68,7 @@ function HomepageTopSection() {
                     ${styles.ht2}
                     ${animation.slide_in_left}
                 `}>
-                        I am a Software Developer
+                        I am a <span>Software Developer</span>
                     </h2>
                 </div>
 
