@@ -46,7 +46,7 @@ li::marker{
 }
 
 .page_heading {
-    font-family: "PT Serif";
+    font-family: "Alegreya";
     font-size: 2rem;
     padding: 20px 0 20px 60px;
 }
@@ -58,8 +58,10 @@ li::marker{
 }
 
 .project_summary {
+    font-family: "Hind";
     font-weight: normal;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    line-height: 1.2rem;
     font-style: italic;
     opacity: 0.8;
     padding-top: 5px;
@@ -72,6 +74,8 @@ li::marker{
     padding: 20px 0 20px 0;
     justify-content: center;
     max-width: calc(100% - 60px);
+    font-family: "Rubik";
+    font-weight: 500;
 }
 
 .project_row:hover {
@@ -133,7 +137,8 @@ li::marker{
 }
 
 .project_technologies_header {
-    font-size: 0.8rem;
+    font-family: "Rubik";
+    font-size: 1rem;
     padding: 20px 0 10px 0;
 }
 

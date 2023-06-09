@@ -38,7 +38,7 @@ function AboutPage() {
 function LeftArea() {
     return (
         <>
-            <h2 style={{ paddingLeft: "2rem" }}>About Me</h2>
+            <h2 style={{ paddingLeft: "2rem", fontFamily: "Rubik" }}>About Me</h2>
             <div className={styles.intro_para}>
                 <ul>
                     <li>
@@ -66,7 +66,7 @@ function LeftArea() {
                     <BackEnd />
                     <General />
                 </div>
-                <div> I have also experimented with languages like C, C++, C# and also built a few experimental apps with Kotlin and Swift. I haven't used them extensively but can pick them up fairly quickly if needed.</div>
+                <div className={styles.stack_bottom_text}> I have also experimented with languages like C, C++, C# and also built a few experimental apps with Kotlin and Swift. I haven't used them extensively but can pick them up fairly quickly if needed.</div>
             </div>
 
         </>

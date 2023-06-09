@@ -21,3 +21,11 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+:root{
+    --text: #ebebeb;
+    --background: #121212;
+    --primary-button: #158abc;
+    --secondary-button: #fdf7f7;
+    --accent: #ff40ff;
+    --accent2: #2c04de;
+}
