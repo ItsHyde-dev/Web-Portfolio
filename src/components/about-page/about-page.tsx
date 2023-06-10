@@ -38,7 +38,7 @@ function AboutPage() {
 function LeftArea() {
     return (
         <>
-            <h2 style={{ paddingLeft: "2rem", fontFamily: "Rubik" }}>About Me</h2>
+            <h2 >About Me</h2>
             <div className={styles.intro_para}>
                 <ul>
                     <li>
