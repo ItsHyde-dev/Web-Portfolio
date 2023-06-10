@@ -54,8 +54,6 @@ function ProjectBuilder(props: { projects: {}[] }) {
 
 function ProjectRow(props: any) {
 
-    const navigate = useNavigate();
-
     return (
         <li>
             <div className={styles.project_row}>
