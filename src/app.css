@@ -1,11 +1,12 @@
 html {
     position: absolute;
-    background-image: url('./assets/rose-petals.svg');
+    background-image: url('./assets/rose-petals-blue.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-color: #080808;
+    background-color: rgb(25, 25, 25);
+    background-blend-mode: color-dodge;
     inset: 0;
     height: 100%;
 }

@@ -2,6 +2,9 @@
     font-family: Rubik;
     font-size: 2.5rem;
     font-weight: 500;
+    background-image: linear-gradient(to right, var(--text), 70%, grey);
+    background-clip: text;
+    color: transparent;
 }
 
 .header_container {
@@ -9,7 +12,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    text-align: center;
+    text-align: end;
     padding: 2rem 0 1rem 0;
     position: relative;
 }
@@ -20,7 +23,7 @@
     position: absolute;
     text-decoration: none;
     font-size: 1rem;
-    color: var(--primary-button);
+    color: teal;
     padding-left: 2rem;
     transform: translateX(150%) translateY(-100%);
 }
@@ -81,6 +84,8 @@
 }
 
 .right_area_header {
+    font-family: "Rubik";
+    font-weight: 500;
     padding-left: 2rem;
     margin-block-end: 0;
 }
@@ -96,7 +101,7 @@
     margin-top: 1rem;
     padding: 2rem;
     border-radius: 2rem;
-    background-color: rgba(42,50,59,0.8);
+    background-color: rgba(0,120,120,0.7);
     font-size: 1.2rem;
     text-align: left;
     font-family: 'Rubik', sans-serif;
@@ -158,6 +163,10 @@
 }
 
 .ftd_list_container .bubble {
+    background-color: rgba(10, 10, 10, 0.1);
+}
+
+.ftd_list_container .bubble {
     height: calc(100% - 4.5rem);
     margin-top: 0;
 }
@@ -177,4 +186,15 @@
 
 .stack_list li {
     color: rgb(220, 220, 220);
+}
+
+.bubble h4 {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+
+.left_area h2 {
+    padding-left: 2rem;
+    font-family: Rubik;
+    font-weight: 500;
 }

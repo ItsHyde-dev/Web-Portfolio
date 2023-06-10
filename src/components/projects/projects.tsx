@@ -1,7 +1,6 @@
 import Navbar from "../navbar/navbar"
 import styles from "./projects.module.css"
 import githubLogo from "../../assets/github-mark-white.svg"
-import codeLogo from "../../assets/transparent-code-logo.png"
 import { useNavigate } from "react-router-dom"
 import ProjectList from "./projectList"
 import position from "../../common/styles/positioning.module.css"
@@ -44,7 +43,6 @@ function ProjectBuilder(props: { projects: {}[] }) {
                             title={project.title}
                             summary={project.summary}
                             projectName={project.projectName}
-                            codeUrl={project.codeUrl}
                             technologies={project.technologies}
                         />
                     )
@@ -71,13 +69,6 @@ function ProjectRow(props: any) {
                     }
                 </div>
                 <div className={styles.project_row_link_logos}>
-                    {
-                        (props.codeUrl.length) ?
-                            <div className={styles.code_logo}>
-                                <img src={codeLogo} alt="</>" className={styles.logos} onClick={() => navigate(`/projects${props.codeUrl}`)}></img>
-                            </div>
-                            : null
-                    }
                     <img src={githubLogo} alt="GitHub" className={styles.logos} onClick={() => openGithub(props.projectName)} />
                 </div>
             </div>
