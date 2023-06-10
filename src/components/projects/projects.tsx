@@ -1,7 +1,6 @@
 import Navbar from "../navbar/navbar"
 import styles from "./projects.module.css"
 import githubLogo from "../../assets/github-mark-white.svg"
-import { useNavigate } from "react-router-dom"
 import ProjectList from "./projectList"
 import position from "../../common/styles/positioning.module.css"
 
