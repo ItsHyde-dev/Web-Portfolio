@@ -23,7 +23,7 @@ export function ContactInformation(ref: any) {
                 <div className={styles.info_desc} >Name</div>
                 <div className={styles.info_text}>Himanshu Joshi <FaRegCopy onClick={copyName} /></div>
                 <div className={styles.info_desc}>Email</div>
-                <div className={styles.info_text}>heyitshyde@gmail.com <FaRegCopy onClick={copyEmail} /></div>
+                <div className={styles.info_text}>himanshu.h.joshi@outlook.com <FaRegCopy onClick={copyEmail} /></div>
                 <div className={styles.info_desc}>Location</div>
                 <div className={styles.info_text}>Navi Mumbai</div>
                 <div className={styles.social_media_container}>
