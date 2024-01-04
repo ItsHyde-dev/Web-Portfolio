@@ -5,7 +5,7 @@ import GithubLogo from '../../assets/github-full-logo.png'
 import LinkedinLogo from '../../assets/linkedin-full-logo.png'
 import InstagramLogo from '../../assets/instagram-logo.png'
 
-export function ContactInformation(ref: any) {
+export function ContactInformation({reference}: {reference: any}) {
 
     const copyEmail = () => {
         navigator.clipboard.writeText('heyitshyde@gmail.com')
@@ -18,7 +18,7 @@ export function ContactInformation(ref: any) {
     }
 
     return (
-        <div ref={ref} className={styles.contact_info_container}>
+        <div ref={reference} className={styles.contact_info_container}>
             <div className={styles.grid}>
                 <div className={styles.info_desc} >Name</div>
                 <div className={styles.info_text}>Himanshu Joshi <FaRegCopy onClick={copyName} /></div>
