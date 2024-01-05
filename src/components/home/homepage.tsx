@@ -24,10 +24,11 @@ export default function Home() {
 
       <div
         className="
-        flex flex-col justify-center items-center
+        flex-col justify-center items-center
         h-[10vh] text-3xl
         animate-bounce ease duration-2
         cursor-pointer
+        hidden md:flex
         "
         onClick={scrollToContactInfo}
       >
@@ -49,25 +50,22 @@ function HomepageTopSection() {
       sm:flex-col md:flex-row-reverse
       "
       >
-        <div className="h-[10rem] aspect-square relative image-pulsing-background md:mr-[15%]">
+        <div className="
+          h-[8rem] md:h-[10rem] aspect-square
+          relative
+          image-pulsing-background
+          md:mr-[15%] md:mt-0 mt-10
+        ">
           <img
             src={ContactImage}
-            className="h-[10rem] aspect-square rounded-full z-10"
+            className="rounded-full z-10"
             alt=""
           />
         </div>
 
-        <div
-          className="
-            text-3xl font-family-[Hind] font-semibold animate-slideInLeft mb-10 mt-[10%] block md:hidden
-            bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent
-          "
-        >
-          Hello I am a Software Developer
-        </div>
-        <div className="md:my-[5%] md:ml-[8%] md:mr-auto md:w-full hidden md:block">
+        <div className="md:my-[5%] md:ml-[8%] md:mr-auto md:w-full text-center md:text-left mt-10">
           <div className="font-bold font-family-[Hind] text-white">
-            <div className="text-2xl animate-slideInLeft md:text-5xl">
+            <div className="text-3xl animate-slideInLeft md:text-5xl">
               Hello
             </div>
             <div
@@ -82,20 +80,19 @@ function HomepageTopSection() {
           </div>
         </div>
       </div>
-      <div className="flex items-center h-[4px]">
-        <div className="w-[70%] h-[4px] bg-gray opacity-50 animate-expandFromCenter" />
-      </div>
+
+      <div className="flex justify-center items-center h-[1px] w-[70%] bg-gray-600 animate-expandFromCenter mt-2" />
     </>
   );
 }
 
 function HomepageMiddleSection({}) {
   return (
-    <div className="flex flex-col items-center mt-3 md:mt-8 animate-fadeIn">
-      <p className="parah-text text-4xl font-normal mb-10">
+    <div className="flex flex-col items-center mt-8 md:mt-12 animate-fadeIn">
+      <p className="parah-text md:text-4xl text-2xl font-normal mb-10">
         Hard work unlocks the hidden potential of talent
       </p>
-      <p className="parah-text text-2xl font-light leading-tight">
+      <p className="parah-text text-lg md:text-2xl font-light leading-tight">
         As a highly skilled and versatile software engineer, I have honed my
         abilities in multiple programming languages, allowing me to bring a
         diverse range of expertise to any project.
