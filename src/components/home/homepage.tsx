@@ -10,7 +10,6 @@ export default function Home() {
   const ref = useRef<null | HTMLDivElement>(null);
 
   const scrollToContactInfo = () => {
-    console.log("Bhenchod");
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
