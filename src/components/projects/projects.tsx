@@ -13,7 +13,7 @@ var githubUrls: { [key: string]: string } = {
 
 export default function ProjectPage() {
     return (
-        <div>
+        <div className="m-4">
             <Navbar highlight="projects" />
             <ProjectGrid />
         </div>

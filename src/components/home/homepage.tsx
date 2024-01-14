@@ -85,7 +85,7 @@ function HomepageTopSection() {
   );
 }
 
-function HomepageMiddleSection({}) {
+function HomepageMiddleSection() {
   return (
     <div className="flex flex-col items-center mt-8 md:mt-12 animate-fadeIn">
       <p className="parah-text md:text-4xl text-2xl font-normal mb-10">

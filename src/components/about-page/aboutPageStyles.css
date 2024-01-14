@@ -1,0 +1,8 @@
+.transparent-scrollbar {
+  scrollbar-color: rgb(100, 100, 100, 0.7) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
